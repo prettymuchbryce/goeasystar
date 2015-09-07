@@ -92,7 +92,7 @@ len(path) // 4
 
 goeasystar is licensed under the MIT license.
 
-goeasystar uses facebookgo's (pqueue)[http://www.github.com/facebookgo/pqueue] which falls under the Apache 2 License.
+goeasystar uses facebookgo's [pqueue](http://www.github.com/facebookgo/pqueue) which falls under the Apache 2 License.
 
 I would be happy to eventually remove it in favor of an MIT-licensed priority queue implementation.
 
