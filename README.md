@@ -1,6 +1,6 @@
 # goeasystar
 
-A port of [EasyStar.js](http://www.easystarjs.com) to golang.
+A port of [EasyStar.js](http://www.easystarjs.com) to the Go programming language.
 
 ##Installation
 `go get github.com/prettymuchbryce/goeasystar`
