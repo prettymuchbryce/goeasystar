@@ -3,7 +3,9 @@
 A port of [EasyStar.js](http://www.easystarjs.com) to the Go programming language.
 
 ##Installation
-`go get github.com/prettymuchbryce/goeasystar`
+```
+go get github.com/prettymuchbryce/goeasystar
+```
 
 ##Documentation
 [GoDoc](https://godoc.org/github.com/prettymuchbryce/goeasystar)
@@ -12,13 +14,21 @@ A port of [EasyStar.js](http://www.easystarjs.com) to the Go programming languag
 
 #### Main Methods
 
-`easystar := goeasystar.NewPathfinder()`
+```go
+easystar := goeasystar.NewPathfinder()
+```
 
-`easystar.SetGrid(grid [][]int)`
+```go
+easystar.SetGrid(grid [][]int)
+```
 
-`easystar.SetAcceptableTiles(t []int)`
+```go
+easystar.SetAcceptableTiles(t []int)`
+```
 
-`easystar.FindPath(startX, startY, endX, endY) ([]*goeasystar.Point, error)`
+```go
+easystar.FindPath(startX, startY, endX, endY) ([]*goeasystar.Point, error)
+```
 
 #### Additional Features
 
@@ -36,36 +46,47 @@ A port of [EasyStar.js](http://www.easystarjs.com) to the Go programming languag
 
 First create an instance of the Pathfinder.
 
-	easystar := NewPathfinder()
+```go
+easystar := NewPathfinder()
+```
 
 Create a grid, or tilemap. You may have made this with a level editor, or procedurally. Let's keep it simple for this example.
 
-    var grid [][]int
-    grid = append(grid, []int{1, 0, 0, 0, 0})
-    grid = append(grid, []int{0, 1, 0, 0, 0})
-    grid = append(grid, []int{0, 0, 1, 0, 0})
-    grid = append(grid, []int{0, 0, 0, 1, 0})
-    grid = append(grid, []int{0, 0, 0, 0, 1})
+```go
+var grid [][]int
+grid = append(grid, []int{1, 0, 0, 0, 0})
+grid = append(grid, []int{0, 1, 0, 0, 0})
+grid = append(grid, []int{0, 0, 1, 0, 0})
+grid = append(grid, []int{0, 0, 0, 1, 0})
+grid = append(grid, []int{0, 0, 0, 0, 1})
+```
 
 Set our grid.
 
-    easystar.SetGrid(grid)
+```go
+easystar.SetGrid(grid)
+```
 
 Set tiles which are "walkable".
-
-    easystar.SetAcceptableTiles([]int{1})
+```go
+easystar.SetAcceptableTiles([]int{1})
+```
 
 Find a path.
 
-    path, err := easystar.FindPath(0, 0, 4, 4)
-    fmt.Println(err == nil) // true
+```go
+path, err := easystar.FindPath(0, 0, 4, 4)
+fmt.Println(err == nil) // true
+```
 
 Oops. We didn't have diagonals enabled so there is no valid path. Lets try again.
 
-    easystar.EnableDiagonals()
-    path, err := easystar.FindPath(0, 0, 4, 4)
-    fmt.Println(err) // nil
-    len(path) // 4
+```go
+easystar.EnableDiagonals()
+path, err := easystar.FindPath(0, 0, 4, 4)
+fmt.Println(err) // nil
+len(path) // 4
+```
 
 ## License
 
