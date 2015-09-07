@@ -12,13 +12,13 @@ A port of [EasyStar.js](http://www.easystarjs.com) to golang.
 
 #### Main Methods
 
-`easystar := goeasystar.NewPathfinder()``
+`easystar := goeasystar.NewPathfinder()`
 
 `easystar.SetGrid(grid [][]int)`
 
-`easystar.SetAcceptableTiles(t []int);`
+`easystar.SetAcceptableTiles(t []int)`
 
-`easystar.FindPath(startX, startY, endX, endY) ([]*goeasystar.Point, error);`
+`easystar.FindPath(startX, startY, endX, endY) ([]*goeasystar.Point, error)`
 
 #### Additional Features
 
@@ -49,15 +49,15 @@ Create a grid, or tilemap. You may have made this with a level editor, or proced
 
 Set our grid.
 
-	easystar.SetGrid(grid)
+    easystar.SetGrid(grid)
 
 Set tiles which are "walkable".
 
-	easystar.SetAcceptableTiles([]int{1})
+    easystar.SetAcceptableTiles([]int{1})
 
 Find a path.
 
-	path, err := easystar.FindPath(0, 0, 4, 4)
+    path, err := easystar.FindPath(0, 0, 4, 4)
     fmt.Println(err == nil) // true
 
 Oops. We didn't have diagonals enabled so there is no valid path. Lets try again.
@@ -71,7 +71,7 @@ Oops. We didn't have diagonals enabled so there is no valid path. Lets try again
 
 goeasystar is licensed under the MIT license.
 
-goeasystar uses facebookgo's (pqueue)[http://www.github.com/facebookgo/pqueue] which falls under the Apache 2 license.
+goeasystar uses facebookgo's (pqueue)[http://www.github.com/facebookgo/pqueue] which falls under the Apache 2 License.
 
 I would be happy to eventually remove it in favor of an MIT-licensed priority queue implementation.
 
