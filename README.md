@@ -76,7 +76,7 @@ Find a path.
 
 ```go
 path, err := easystar.FindPath(0, 0, 4, 4)
-fmt.Println(err == nil) // true
+fmt.Println(err == nil) // false
 ```
 
 Oops. We didn't have diagonals enabled so there is no valid path. Lets try again.
