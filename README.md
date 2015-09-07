@@ -3,11 +3,10 @@
 A port of [EasyStar.js](http://www.easystarjs.com) to golang.
 
 ##Installation
-* `go get github.com/prettymuchbryce/goeasystar`
+`go get github.com/prettymuchbryce/goeasystar`
 
-## Description
-
-goeasystar is an A* pathfinding API written in Go.
+##Documentation
+[GoDoc](https://godoc.org/github.com/prettymuchbryce/goeasystar)
 
 ## API
 
